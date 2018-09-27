@@ -11,12 +11,36 @@ class Weather extends React.Component {
       }
     }
   }
+  fetchData = () => {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.props.zipCode},th&units=metric&APPID=...`)
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState(
+          {
+            forecast: {
+              main: json.weather[0].main,
+              description: json.weather[0].description,
+              temp: json.main.temp
+            }
+          });
+      })
+      .catch((error) => {
+        console.warn(error);
+      });
+  }
+  componentDidMount = () => this.fetchData()
+
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground source={require('./bg.jpeg')} style={styles.backdrop}>
+        <ImageBackground source={require('./bg2.jpeg')} style={styles.backdrop}>
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
-            <View style={{ width: 350, height: 100, backgroundColor: 'rgba(0, 0, 0, 0.66)', alignItems: 'center' }}>
+            <View style={{
+              width: 350,
+              height: 600,
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              alignItems: 'center'
+            }}>
               <Text style={styles.Headline}>{this.props.zipCode}</Text>
               <Text style={styles.Headline}>Nakorn Si Thammarat</Text>
             </View>
