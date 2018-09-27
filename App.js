@@ -5,7 +5,7 @@ import Weather from  './components/Weather'
 export default class App extends React.Component {
   render() {
     return (
-    <Weather zipCode='80140'/>
+    <Weather zipCode='80140' cityName='Pak Phanang'/>
     )
   }
 }
