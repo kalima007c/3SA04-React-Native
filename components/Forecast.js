@@ -13,17 +13,27 @@ export default class Forecast extends React.Component {
                 paddingBottom: 200,
 
             }}>
-                <Text style={styles.noti}>{main}</Text>
-                <Text style={styles.noti}>{description}</Text>
-                <Text style={styles.noti}>{temp + " " + "°C"}</Text>
+                <Text style={styles.notiMain}>{main}</Text>
+                <Text style={styles.notiDesc}>{description}</Text>
+                <Text style={styles.notiTemp}>{temp + " " + "°C"}</Text>
             </View>
         )
     }
 }
 const styles = StyleSheet.create({
-    noti: {
-        fontSize: 30,
+    notiTemp: {
+        fontSize: 60,
         color: 'white'
+    },
+    notiMain: {
+        fontSize: 28,
+        color: 'white',
+        paddingBottom: 25,
+    },
+    notiDesc: {
+        fontSize: 18,
+        color: 'white',
+        paddingBottom: 50,
     },
 
 })

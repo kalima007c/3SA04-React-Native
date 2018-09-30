@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import Forecast from './Forecast'
 
-class Weather extends React.Component {
+export default class Weather extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -53,7 +53,7 @@ class Weather extends React.Component {
 }
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 25
+    paddingTop: 0,
   },
   backdrop: {
     width: '100%',
@@ -66,4 +66,3 @@ const styles = StyleSheet.create({
     color: 'white'
   },
 })
-export default Weather
