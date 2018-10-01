@@ -12,11 +12,11 @@ const RootStack = createStackNavigator({
   initialRouteParams: {zipCode: '90110'}
 })
 
-
 export default class App extends React.Component {  
   render() {
     return (
       <RootStack/>
+    
     )
   }
 }

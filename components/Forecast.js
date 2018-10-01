@@ -13,6 +13,8 @@ export default class Forecast extends React.Component {
                 paddingBottom: 200,
 
             }}>
+                <Text style={styles.owner}>59355512007</Text>
+                <Text style={styles.owner}>Donnukrit Satirakul</Text>
                 <Text style={styles.notiMain}>{main}</Text>
                 <Text style={styles.notiDesc}>{description}</Text>
                 <Text style={styles.notiTemp}>{temp + " " + "°C"}</Text>
@@ -34,6 +36,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: 'white',
         paddingBottom: 50,
+    },
+    owner: {
+        fontSize: 14,
+        color: 'white',
     },
 
 })

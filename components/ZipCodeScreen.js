@@ -15,7 +15,6 @@ const ZipItem = ({ place, code, navigate }) => (
     </View>
   </TouchableHighlight>
 )
-
 const _keyExtractor = item => item.code
 export default class WeatherScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
